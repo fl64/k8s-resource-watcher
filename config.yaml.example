@@ -1,0 +1,19 @@
+---
+# common section for all resources
+common:
+  # (optional) namespaces to watch (optional)
+  namespaces: ["test-prs"]
+  # (optional) common fields to include
+  includePaths: ["metadata.namespace", "status.phase"]
+  # (optional) common fields to exclude
+  excludePaths: ["spec"]
+resources:
+- group: ""
+  version: "v1"
+  resource: "persistentvolumeclaims"
+  ## (optional) namespaces to watch (optional)
+  # namespaces: ["test-prs"]
+  ## (optional) common fields to include
+  # includePaths: ["status.phase"]
+  ## (optional) common fields to exclude
+  # excludePaths: ["kind"]

@@ -1,0 +1,33 @@
+---
+# common section for all resources
+common:
+  # namespaces to watch
+  namespaces: ["test-prs"]
+  # common fields to include
+  includePaths: ["metadata.namespace", "status.phase","status.conditions"]
+  # common fields to exclude
+  #excludePaths: ["status","spec","metadata"]
+resources:
+# resource config
+# - group: "virtualization.deckhouse.io"
+#   version: "v1alpha2"
+#   resource: "virtualmachines"
+#   namespaces: []
+- group: "virtualization.deckhouse.io"
+  version: "v1alpha2"
+  resource: "clustervirtualimages"
+- group: "virtualization.deckhouse.io"
+  version: "v1alpha2"
+  resource: "virtualimages"
+- group: "virtualization.deckhouse.io"
+  version: "v1alpha2"
+  resource: "virtualdisks"
+#   namespaces: []
+  #includePaths: ["status.phase"]
+  #excludePaths: ["kind"]
+- group: ""
+  version: "v1"
+  resource: "persistentvolumeclaims"
+  #namespaces: ["test-prs"]
+  #includePaths: ["status.phase"]
+  #excludePaths: ["kind"]
